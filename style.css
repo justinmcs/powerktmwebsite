@@ -142,12 +142,18 @@ h2 {
 	float: left;
 	padding-left: -140px;
 }
-
+#vid{
+	width:560px;
+	height:315px;
+}
+.element {
+	height: 350px;
+}
 .txt {
-	padding-right: 50px;
-	padding-top: 120px;
+	padding-right: 5%;
+	padding-top: 5%;
 	overflow: hidden;
-	padding-left: 50px;
+	padding-left: 5%;
 }
 
 
