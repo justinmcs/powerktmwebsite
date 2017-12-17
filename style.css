@@ -1,0 +1,143 @@
+/*Style de la barre de menu responsive*/
+ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding: 0;
+}
+
+/*Style général de la barre de menu */
+li {
+	display: inline-block;
+	float: left;
+
+}
+
+/*disposition des menus */
+li a {
+	display: block;
+	min-width: 140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	background: #2F3036;
+	text-decoration: none;
+}
+
+/*Style lorsque la souris est sur le menu*/
+li:hover a {
+	background: rgb(217, 90,13);
+}
+
+/*Style des sous-menus lorsque la souris est sur le menu*/
+li:hover ul li a {
+	background: dimgrey;
+	color: black;
+	height 50px;
+	line-height: 50px;
+}
+
+/*Couleur lorsque la souris est sur le sous-menu*/
+li:hover ul li a:hover {
+	background: rgb(217, 90, 13);
+	color: #FFF;
+}
+
+/* Cacher le sous-menu lorsque la souris n'est pas sur le menu */
+li ul {
+	display: none;
+}
+
+/*Afficher les sous menus à la verticale */
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Eviter le "wrapping" des sous-menus */
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Affichage des sous menus lorsque la souris est sur le menu */
+ul li a:hover + .hidden, .hidden:hover { /* utilisation du selecteur + pour que les sous menus restent affichés lorsque l'on descends la souris dessus */
+	display: block;
+}
+
+/*Cacher la checkbox qui permet d'afficher le menu */
+input[type=checkbox] {
+	display: none;
+}
+
+/*Afficher le menu lorsque la checkboxx invisible est cochée */
+input[type=checkbox]:checked ~ #menu {
+	display: block;
+}
+
+/*Style du label menu */
+.show-menu {
+	font-family: "Helvetica-neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: white;
+	background: rgb(217, 90, 13);
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/* Explication de l'utilisation du label: Le label doit apparaitre comme un bouton aux yeux de l'utilisateur, et en cliquant sur ce bouton, il coche la checkbox qui affichera le menu. La fonction "Afficher le menu" est utile lorsque la page va être trop petite pour afficher le menu correctement. */
+
+/*Responsive style pour afficher un menu vertical lorsque l'écran est trop petit pour afficher le menu horizontal*/
+@media screen and (max-width: 760px) {
+	/*Faire apparaitre les sous menus */
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Créer un espace vertical entre les sous-menus */
+	li {
+		margin-bottom: 1px;
+	}
+	/* Afficher les menus en largeur maximale */
+	ul li, li a {
+		width: 100%;
+	}
+	.show-menu {
+		display: block;
+	}
+}
+/*Fin du style de la barre de menu responsive */
+
+
+main {
+	padding-top: 70px;
+	padding-left: 50Px;
+}
+
+h1 {
+	font-family: Arial;
+	font-size: 2em;
+	text-align: center;
+}
+
+h2 {
+	font-family: Arial;
+	font-size: 1.2em;
+}
+
+.video {
+	float: left;
+	padding-left: -140px;
+}
+
+.txt {
+	padding-right: 50px;
+	padding-top: 120px;
+	overflow: hidden;
+	padding-left: 50px;
+}
+
+
