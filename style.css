@@ -13,11 +13,11 @@ li {
 	width:20%
 
 }
-
 #img {
 	width: 100%;
 	height: 30%;
-	display: inline-block;
+	border:none;
+	display:block;
 }
 
 /*disposition des menus */
