@@ -60,6 +60,7 @@ li ul {
 
 /*Afficher les sous menus à la verticale */
 li ul li {
+	width:100%;
 	display: block;
 	float: none;
 }
